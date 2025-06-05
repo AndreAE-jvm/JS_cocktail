@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+        url('https://sutochno.ru/doc/images/galleries/180/krym-pesok6.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #ffd166);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-title::before {
+    content: '✧';
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    font-size: 1.5rem;
+    color: #ffd166;
+}
+
+.header-title::after {
+    content: '✧';
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    font-size: 1.5rem;
+    color: #ffd166;
+}
+
+.header-note {
+    font-size: 0.9rem;
+    color: #adb5bd;
+    text-align: center;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.header-container {
+    background-color: #343a40;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid #495057;
+}
+
+
+
+
+.cocktail-card {
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.cocktail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cocktail-img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#cocktails-container {
+    min-height: 400px;
+}
+
+/* Стиль для кнопки */
+.btn-details {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.btn-details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Стиль для модального окна */
+.modal-body img {
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+#searchInput {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#searchBtn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#resetSearchBtn {
+  margin-left: 5px;
+}

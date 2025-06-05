@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список коктейлей</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="header-container">
+      <h1 class="header-title">Список коктейлей для студентов группы PYTHON 51 ТОП Академии*</h1>
+      <p class="header-note">* акция дествует только для тех, кто успешно пройдет обучение</p>
+    </div>
+
+    <!-- Поиск по названию -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" id="searchInput" class="form-control" placeholder="Поиск по названию...">
+          <button id="searchBtn" class="btn btn-primary">Найти</button>
+          <button id="resetSearchBtn" class="btn btn-outline-danger">Сброс</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <button id="get-cocktails-btn" class="btn btn-primary btn-lg mb-4">
+          Получить список
+          <span class="spinner-border spinner-border-sm d-none" id="spinner" role="status"></span>
+        </button>
+        <div id="cocktails-container" class="row g-4"></div>
+        <div id="error-message" class="alert alert-danger d-none mt-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Шаблон карточки коктейля -->
+  <template id="cocktail-template">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="" class="card-img-top cocktail-img" alt="Коктейль">
+        <div class="card-body">
+          <h5 class="card-title cocktail-name"></h5>
+          <p class="card-text cocktail-instructions"></p>
+          <button class="btn btn-primary btn-details" data-bs-toggle="modal" data-bs-target="#cocktailModal">
+            <i class="bi bi-info-circle"></i> Подробнее
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted cocktail-category"></small>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Модальное окно -->
+  <div class="modal fade" id="cocktailModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cocktailModalTitle"></h5>
+        </div>
+        <div class="modal-body" id="cocktailModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
